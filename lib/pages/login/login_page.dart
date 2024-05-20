@@ -1,4 +1,5 @@
 import 'package:ecommerce/consts/consts.dart';
+import 'package:ecommerce/pages/signup/signup_screeen.dart';
 import 'package:ecommerce/widgets/bg_widget.dart';
 import 'package:ecommerce/widgets/button_widget.dart';
 import 'package:ecommerce/widgets/logo_widget.dart';
@@ -33,7 +34,23 @@ class LoginScreen extends StatelessWidget {
                   10.heightBox,
                   button_widget(title: "Login",onPressed: (){},color: redColor,textColor: whiteColor).box.width(context.screenWidth-50).make(),
                   10.heightBox,
-                  "don't have an accout ? Sign Up".text.make()
+                  Row(
+                   mainAxisAlignment: MainAxisAlignment.center,
+                    children: [
+               "don't have an accout ?".text.make(),
+               GestureDetector(
+                onTap: (){
+                  Navigator.push(context, MaterialPageRoute(builder: (context)=>RegisterScreen()));
+                },
+                child: Text(
+' Sign Up',
+style: TextStyle(
+decoration: TextDecoration.underline,
+),
+))
+                    ],
+                  )
+                 
 
                 ],
               ).box.rounded.padding(EdgeInsets.all(16)).white.width(context.screenWidth-70).make()
