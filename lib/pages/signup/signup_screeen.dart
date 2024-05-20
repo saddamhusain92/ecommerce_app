@@ -21,10 +21,11 @@ class _RegisterScreenState extends State<RegisterScreen> {
       body: Center(
         child: SingleChildScrollView(
           child: Column(
+            mainAxisAlignment: MainAxisAlignment.start,
             children: [
               (context.screenHeight * 0.1).heightBox,
               applogo(),
-              10.heightBox,
+              40.heightBox,
               "Login $appname".text.fontFamily(semibold).white.size(14).make(),
               20.heightBox,
               Column(
